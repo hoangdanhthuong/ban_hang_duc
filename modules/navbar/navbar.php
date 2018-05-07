@@ -1,3 +1,9 @@
+<?php 
+include("admin-manager/modules/config.php");
+$sql = "SELECT * FROM phan_loai_lon WHERE tinh_trang = 1 order by thu_tu";
+$result = mysqli_query($conn, $sql);
+?>
+
 <div class="row nav-content">
 	<nav class="navbar navbar-inverse " data-spy="affix" data-offset-top="197">
 		<div class="container-fluid ">
@@ -11,63 +17,60 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Quần áo<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Page 1-1</a></li>
-							<li><a href="#">Page 1-2</a></li>
-							<li><a href="#">Page 1-3</a></li>
-						</ul>
-					</li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Giày <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Page 1-1</a></li>
-							<li><a href="#">Page 1-2</a></li>
-							<li><a href="#">Page 1-3</a></li>
-						</ul>
-					</li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dụng cụ <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Page 1-1</a></li>
-							<li><a href="#">Page 1-2</a></li>
-							<li><a href="#">Page 1-3</a></li>
-						</ul>
-					</li>
+					<?php
+					while($row = mysqli_fetch_array($result)){
+						?>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $row['ten']?><span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<?php
+								$sql_1 = "SELECT * FROM phan_loai_nho WHERE id_phan_loai_lon = ".$row['id']." and tinh_trang = 1 order by thu_tu desc";
+
+								$result_1 = mysqli_query($conn, $sql_1);
+								while($row_1 = mysqli_fetch_assoc($result_1)){
+									echo '<li><a href="#">'.$row_1['ten'].'</a></li>';
+								}
+								?>
+
+							</ul>
+						</li>
+						<?php
+					}
+					?>
+					
 					<li><a href="">Liên hệ</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li ><a href="?xem=giohang" id="cart-shop"><span class="badge" id="count-item" >
-					<?php if(isset($_SESSION['tong_sp_gio_hang'])){
-						echo $_SESSION['tong_sp_gio_hang'];
+						<?php if(isset($_SESSION['tong_sp_gio_hang'])){
+							echo $_SESSION['tong_sp_gio_hang'];
+						}else{
+							echo 0;
+						}?>
+
+					</span><i class="glyphicon glyphicon-shopping-cart"></i></a></li>
+					<?php
+					if(!isset($_SESSION['username_sport'])){
+						?>
+						<li id="signup-user">
+							<?php include("modules/navbar/signup.php");?>
+
+						</li>
+						<li id="login-user">
+							<?php include("modules/navbar/login.php");?>
+						</li>
+						<?php
 					}else{
-						echo 0;
-					}?>
-
-				</span><i class="glyphicon glyphicon-shopping-cart"></i></a></li>
-				<?php
-				if(!isset($_SESSION['username_sport'])){
+						?>
+						<li id="logout-user">
+							<a href="modules/navbar/logout.php" ><span class="glyphicon glyphicon-log-out"></span> Đăng xuất</a>
+						</li>
+						<?php
+					}
 					?>
-					<li id="signup-user">
-						<?php include("modules/navbar/signup.php");?>
+				</ul>
 
-					</li>
-					<li id="login-user">
-						<?php include("modules/navbar/login.php");?>
-					</li>
-					<?php
-				}else{
-					?>
-					<li id="logout-user">
-						<a href="modules/navbar/logout.php" ><span class="glyphicon glyphicon-log-out"></span> Đăng xuất</a>
-					</li>
-					<?php
-				}
-				?>
-			</ul>
-
+			</div>
 		</div>
-	</div>
-</nav>
+	</nav>
 </div>

@@ -22,5 +22,8 @@
 	<script type="text/javascript" src="js/myscript.js"></script>
 	<script type="text/javascript" src="js/xuly.js"></script>
 	<script src="js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="js/tinymce/js/tinymce/jquery.tinymce.min.js"></script>
+	<script type="text/javascript" src="js/tinymce/js/tinymce/tinymce.min.js"></script>
+	<script>tinymce.init({ selector:'textarea' });</script>
 </body>
 </html>

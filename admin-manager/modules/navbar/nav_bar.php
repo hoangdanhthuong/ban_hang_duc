@@ -11,20 +11,27 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li ><a href="index.php?quanly=loai_sp">Quản lý loại SP</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Quản lý loại
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="index.php?quanly=phanloailon">Phân loại lớn</a></li>
+                <li><a href="index.php?quanly=phanloainho">Phân loại nhỏ</a></li>
+              </ul>
+            </a>
+          </li>
           <li><a href="index.php?quanly=hieu_sp">Thương hiệu</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Quản lý sản phẩm
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Sản phẩm</a></li>
-                <li><a href="#">Bài viết</a></li>
-                <li><a href="#">Doanh thu</a></li>
+                <li><a href="index.php?quanly=sanpham">Sản phẩm</a></li>
+                <li><a href="index.php?quanly=baivietsanpham">Bài viết</a></li>
               </ul>
             </a>
           </li>
           <li><a href="#">Tin tức</a></li>
-          <li><a href="#">Khuyến mại</a></li>
+          <li><a href="index.php?quanly=khuyenmai">Khuyến mại</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Thống kê
               <span class="caret"></span></a>

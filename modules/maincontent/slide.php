@@ -1,3 +1,9 @@
+
+<?php 
+include('admin-manager/modules/config.php');
+$sql = "SELECT * FROM khuyen_mai where tinh_trang = '1' order by thu_tu desc";
+$result = mysqli_query($conn, $sql);
+?>
 <div class="slider-content">
 	<div class="row">
 		<div class="col-md-9">
@@ -5,36 +11,37 @@
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
 					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<?php
+					$i=1;
+					while($i<=mysqli_num_rows($result)){
+						echo '<li data-target="#myCarousel" data-slide-to="'.$i.'"></li>';
+						$i++;
+					}
+					$row = mysqli_fetch_assoc($result);
+					?>
 				</ol>
 
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<img src="image/chicago.jpg" alt="New York" >
+						<img src="admin-manager/modules/content/khuyen_mai/uploads/<?php echo $row['hinh_anh']?>" alt="New York" >
 						<div class="carousel-caption">
-							<h3>New York</h3>
-							<p>The atmosphere in New York is lorem ipsum.</p>
+							<h3><?php echo $row['tieu_de']?></h3>
 						</div>      
 					</div>
+					<?php 
+					while($row = mysqli_fetch_assoc($result)){
+						?>
 
-					<div class="item">
-						<img src="image/chicago.jpg" alt="Chicago"  >
-						<div class="carousel-caption">
-							<h3>Chicago</h3>
-							<p>Thank you, Chicago - A night we won't forget.</p>
-						</div>      
-					</div>
-
-					<div class="item text-center">
-						<img src="image/chicago.jpg" alt="Chicago" >
-						<div class="carousel-caption">
-							<h3>Chicago</h3>
-							<p>Thank you, Chicago - A night we won't forget.</p>
-						</div>      
-					</div>
-
+						<div class="item">
+							<img src="admin-manager/modules/content/khuyen_mai/uploads/<?php echo $row['hinh_anh']?>" alt="New York" >
+							<div class="carousel-caption">
+								<h3><?php echo $row['tieu_de']?></h3>
+							</div>      
+						</div>
+						<?php
+					}
+					?>
 				</div>
 
 				<!-- Left and right controls -->
