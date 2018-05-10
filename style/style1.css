@@ -286,3 +286,15 @@ body{
   75% {transform: scale(1);}
   100% {transform: scale(0.4);}
 }
+.thumbnail img {
+  height:150px;
+  width:100%;
+
+}
+.thumbnail .caption{
+  height: 100px;
+  white-space: unset;
+}
+.thumbnail .ratings{
+  height: 20px;
+}

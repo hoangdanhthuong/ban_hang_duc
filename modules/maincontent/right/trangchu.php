@@ -1,3 +1,17 @@
+<style type="text/css">
+.thumbnail img {
+	height:180px;
+	width:100%;
+
+}
+.thumbnail .caption{
+	height: 100px;
+	white-space: unset;
+}
+.thumbnail .ratings{
+	height: 20px;
+}
+</style>
 <div class="container">
 	<!-- title -->
 	<div class="new-product">
@@ -11,11 +25,14 @@
 			<div class="row">
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://www.mbet88vn.com/wp-content/uploads/2018/02/gai-xinh-5-1.jpg" alt="" class="img-responsive">
+						<img src="images/dung_cu/1.jpg" alt="" >
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="?xem=chitietsanpham&id=">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
+							</div>
+							
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -37,11 +54,13 @@
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="https://tophinhanhdep.com/wp-content/uploads/2017/12/anh-gai-xinh-dep-nhat-680x350.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="?xem=chitietsanpham&id=">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+						<img src="images/giay_the_thao/1-1.jpg" alt="" >
+						<div class="caption" >
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
+							</div>
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -63,11 +82,13 @@
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="?xem=chitietsanpham&id=">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
+							</div>
+							<p>Sản phẩm được sử dụng nhiều nhất</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -89,11 +110,14 @@
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="?xem=chitietsanpham&id=">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
+							</div>
+							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
+
 						</div>
 						<div class="ratings">
 							<p>
@@ -114,7 +138,122 @@
 					</div>
 				</div>
 			</div>
-			
+			<div class="row">
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img src="images/dung_cu/1.jpg" alt="" >
+						<div class="caption">
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
+							</div>
+							
+							<p>Sản phẩm của tập đoàn hòa phát</p>
+						</div>
+						<div class="ratings">
+							<p>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								(15 reviews)
+							</p>
+						</div>
+						<div class="space-ten"></div>
+						<div class="btn-ground text-center">
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
+						</div>
+						<div class="space-ten"></div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img src="images/giay_the_thao/1-1.jpg" alt="" >
+						<div class="caption" >
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
+							</div>
+							<p>Sản phẩm của tập đoàn hòa phát</p>
+						</div>
+						<div class="ratings">
+							<p>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								(15 reviews)
+							</p>
+						</div>
+						<div class="space-ten"></div>
+						<div class="btn-ground text-center">
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
+						</div>
+						<div class="space-ten"></div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
+						<div class="caption">
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
+							</div>
+							<p>Sản phẩm được sử dụng nhiều nhất</p>
+						</div>
+						<div class="ratings">
+							<p>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								(15 reviews)
+							</p>
+						</div>
+						<div class="space-ten"></div>
+						<div class="btn-ground text-center">
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
+						</div>
+						<div class="space-ten"></div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
+						<div class="caption">
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
+							</div>
+							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
+
+						</div>
+						<div class="ratings">
+							<p>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								(15 reviews)
+							</p>
+						</div>
+						<div class="space-ten"></div>
+						<div class="btn-ground text-center">
+							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
+						</div>
+						<div class="space-ten"></div>
+					</div>
+				</div>
+			</div>
 			<!-- Modal -->
 			<div class="modal fade" id="product_view" role="dialog">
 				<div class="modal-dialog">
@@ -194,14 +333,17 @@
 		<!-- List product -->
 		<div class="content">
 			
-			<div class="row" >
+			<div class="row">
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://file.vforum.vn/hinh/2018/01/hinh-anh-girl-xinh-facebook-girl-xinh-tu-suong-2.jpg" alt="" height="138px" class="img-responsive" >
+						<img src="images/dung_cu/1.jpg" alt="" >
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="?xem=chitietsanpham&id=">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
+							</div>
+							
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -215,21 +357,21 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button  class="btn btn-primary btn-buy-now"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
-
-				<div class="col-md-3" >
-
+				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://img.gac8.com/webroot/img/news/2018/01/31/bo-anh-tong-hop-g225i-xinh-facebook-2018.jpg" alt=""  height="138px" width="100%" class="img-responsive">
-						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="?xem=chitietsanpham&id=">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+						<img src="images/giay_the_thao/1-1.jpg" alt="" >
+						<div class="caption" >
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
+							</div>
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -243,22 +385,21 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button  class="btn btn-primary btn-buy-now"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
-
-
 				</div>
-
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="?xem=chitietsanpham&id=">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
+							</div>
+							<p>Sản phẩm được sử dụng nhiều nhất</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -272,7 +413,36 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button  class="btn btn-primary btn-buy-now"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
+						</div>
+						<div class="space-ten"></div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
+						<div class="caption">
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
+							</div>
+							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
+
+						</div>
+						<div class="ratings">
+							<p>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								(15 reviews)
+							</p>
+						</div>
+						<div class="space-ten"></div>
+						<div class="btn-ground text-center">
+							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
@@ -284,11 +454,14 @@
 			<div class="row">
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/dung_cu/1.jpg" alt="" >
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="?xem=chitietsanpham&id=">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
+							</div>
+							
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -302,7 +475,7 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button  class="btn btn-primary btn-buy-now"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
@@ -310,11 +483,13 @@
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="?xem=chitietsanpham&id=">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+						<img src="images/giay_the_thao/1-1.jpg" alt="" >
+						<div class="caption" >
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
+							</div>
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -328,7 +503,7 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button  class="btn btn-primary btn-buy-now"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
@@ -336,11 +511,13 @@
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="?xem=chitietsanpham&id=">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
+							</div>
+							<p>Sản phẩm được sử dụng nhiều nhất</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -354,7 +531,7 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button  class="btn btn-primary btn-buy-now"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
@@ -362,11 +539,14 @@
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="?xem=chitietsanpham&id=">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
+							</div>
+							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
+
 						</div>
 						<div class="ratings">
 							<p>
@@ -380,7 +560,7 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button  class="btn btn-primary btn-buy-now"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</button>
+							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
@@ -461,7 +641,7 @@
 	<div class="new-product">
 		<div class="row">
 			<div class="linkview">
-				<p>Giày thể tao</p>
+				<p>Giày thể thao</p>
 			</div>
 		</div>
 		<!-- List product -->
@@ -469,11 +649,14 @@
 			<div class="row">
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/dung_cu/1.jpg" alt="" >
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
+							</div>
+							
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -487,19 +670,21 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+						<img src="images/giay_the_thao/1-1.jpg" alt="" >
+						<div class="caption" >
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
+							</div>
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -513,19 +698,21 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
+							</div>
+							<p>Sản phẩm được sử dụng nhiều nhất</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -539,19 +726,22 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
+							</div>
+							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
+
 						</div>
 						<div class="ratings">
 							<p>
@@ -565,8 +755,8 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
@@ -575,11 +765,14 @@
 			<div class="row">
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/dung_cu/1.jpg" alt="" >
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
+							</div>
+							
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -593,19 +786,21 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+						<img src="images/giay_the_thao/1-1.jpg" alt="" >
+						<div class="caption" >
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
+							</div>
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -619,19 +814,21 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
+							</div>
+							<p>Sản phẩm được sử dụng nhiều nhất</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -645,19 +842,22 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
+							</div>
+							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
+
 						</div>
 						<div class="ratings">
 							<p>
@@ -671,8 +871,8 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
@@ -760,11 +960,14 @@
 			<div class="row">
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/dung_cu/1.jpg" alt="" >
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
+							</div>
+							
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -778,19 +981,21 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+						<img src="images/giay_the_thao/1-1.jpg" alt="" >
+						<div class="caption" >
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
+							</div>
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -804,19 +1009,21 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-shopping-car"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
+							</div>
+							<p>Sản phẩm được sử dụng nhiều nhất</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -830,19 +1037,22 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
+							</div>
+							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
+
 						</div>
 						<div class="ratings">
 							<p>
@@ -856,8 +1066,8 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
@@ -866,11 +1076,14 @@
 			<div class="row">
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/dung_cu/1.jpg" alt="" >
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
+							</div>
+							
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -884,19 +1097,21 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+						<img src="images/giay_the_thao/1-1.jpg" alt="" >
+						<div class="caption" >
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
+							</div>
+							<p>Sản phẩm của tập đoàn hòa phát</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -910,19 +1125,21 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
+							</div>
+							<p>Sản phẩm được sử dụng nhiều nhất</p>
 						</div>
 						<div class="ratings">
 							<p>
@@ -936,19 +1153,22 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>
 				</div>
 				<div class="col-md-3">
 					<div class="thumbnail">
-						<img src="http://tech.firstpost.com/wp-content/uploads/2014/09/Apple_iPhone6_Reuters.jpg" alt="" class="img-responsive">
+						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
 						<div class="caption">
-							<h4 class="pull-right">$700.99</h4>
-							<h4><a href="#">Mobile Product</a></h4>
-							<p>Lorem Ipsum is simply dummy text</p>
+							<div class="row" style="height: 50px">
+								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
+								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
+							</div>
+							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
+
 						</div>
 						<div class="ratings">
 							<p>
@@ -962,8 +1182,8 @@
 						</div>
 						<div class="space-ten"></div>
 						<div class="btn-ground text-center">
-							<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 						</div>
 						<div class="space-ten"></div>
 					</div>

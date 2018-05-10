@@ -57,24 +57,31 @@ $result = mysqli_query($conn, $sql);
 		</div>
 		<!-- san pham ban chay -->
 		<div class="col-md-3 list-news">
-			<div class="title-news">
+			<div class="title-news" style="margin-bottom: 10px">
 				<p>Tin tức</p>
 			</div>
 			<div class="item">
-				<a href="#">
-					<img src="image/chicago.jpg" >
-				</a>
+				<div class="">
+					<a href="">
+						<img src="images/tin_tuc/1.jpg" alt="Lights" style="width:100%">
+						<div class="caption" style="height: 50px">
+							<p>Công vinh thất thủ tại thành phố hcm</p>
+						</div>
+					</a>
+				</div>
 			</div>
 			<div class="item">
-				<a href="#">
-					<img src="image/chicago.jpg" >
-				</a>
+				<div class="">
+					<a href="">
+						<img src="images/tin_tuc/2.jpg" alt="Lights" style="width:100%">
+						<div class="caption" style="height: 50px">
+							<p>Chelsea vô địch world cup</p>
+						</div>
+					</a>
+				</div>
 			</div>
-			<div class="item">
-				<a href="#">
-					<img src="image/chicago.jpg" >
-				</a>
-			</div>
+
+			
 		</div>
 
 	</div>
