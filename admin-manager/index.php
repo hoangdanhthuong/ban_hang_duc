@@ -15,6 +15,7 @@
 	<div class="wrapper">
 		<div class="container-fluid">
 			<?php
+			include('modules/config.php');
 			include('modules/xu_ly_dang_nhap.php');
 			?>
 		</div>

@@ -58,3 +58,17 @@ footer {
 	font-size: 14px;
 	text-transform: uppercase;
 }
+input[type=number]::-webkit-inner-spin-button, 
+
+input[type=number]::-webkit-outer-spin-button { 
+
+	-webkit-appearance: none; 
+
+	margin: 0; 
+
+}
+table.dataTable td, table.dataTable th {
+    padding: 3px 10px;
+    width: 1px;
+    white-space: nowrap;
+}

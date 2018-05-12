@@ -1,4 +1,8 @@
-
+<?php 
+$id = $_GET['id'];
+$sql = "SELECT * FROM san_pham WHERE id_san_pham = ".$id;
+$row = mysqli_fetch_assoc(mysqli_query($conn,$sql));
+?>
 <div class="row">
 
 	<div class="details-product col-md-10 col-md-offset-1">
@@ -13,23 +17,30 @@
 					<div class="preview col-md-6">
 
 						<div class="preview-pic tab-content">
-							<div class="tab-pane active" id="pic-1"><img src="images/giay_the_thao/1-2.jpg" /></div>
-							<div class="tab-pane" id="pic-2"><img src="images/giay_the_thao/1-1.jpg" /></div>
-							<div class="tab-pane" id="pic-3"><img src="images/giay_the_thao/1-3.jpg" /></div>
-							<div class="tab-pane" id="pic-4"><img src="images/giay_the_thao/1-4.jpg" /></div>
-							<div class="tab-pane" id="pic-5"><img src="images/giay_the_thao/2-1.jpg" /></div>
+							<?php 
+							$image = array();
+							$image = explode(':',$row['hinh_anh_sp']);
+							?>
+							<div class="tab-pane active" id="pic-1"><img style="position: relative;height: 400px" src="<?php echo $target.$row['hinh_anh_tieu_de'];?>" /></div>
+							<?php
+							for ($i = 0; $i < count($image); $i++){
+								echo '<div class="tab-pane" id="pic-'.($i + 2).'"><img style="position: relative;height: 400px" src="'.$target.$image[$i].'" /></div>';
+							}
+							?>
+							
 						</div>
-						<ul class="preview-thumbnail nav nav-tabs">
-							<li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="images/giay_the_thao/1-2.jpg" /></a></li>
-							<li><a data-target="#pic-2" data-toggle="tab"><img src="images/giay_the_thao/1-1.jpg" /></a></li>
-							<li><a data-target="#pic-3" data-toggle="tab"><img src="images/giay_the_thao/1-3.jpg" /></a></li>
-							<li><a data-target="#pic-4" data-toggle="tab"><img src="images/giay_the_thao/1-4.jpg" /></a></li>
-							<li><a data-target="#pic-5" data-toggle="tab"><img src="images/giay_the_thao/2-1.jpg" /></a></li>
+						<ul class="preview-thumbnail nav nav-tabs" >
+							<li class="active" ><a data-target="#pic-1" data-toggle="tab"><img style="position: relative;height: 75px" src="<?php echo $target.$row['hinh_anh_tieu_de'];?>" /></a></li>
+							<?php
+							for ($i = 0; $i < count($image); $i++){
+								echo '<li ><a data-target="#pic-'.($i + 2).'" data-toggle="tab" ><img style="position: relative;height: 75px" src="'.$target.$image[$i].'" /></a></li>';
+							}
+							?>
 						</ul>
 
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">Giày thể thao BH-052</h3>
+						<h3 class="product-title"><?php echo $row['ten_san_pham'] ?></h3>
 						<div class="rating">
 							<div class="stars">
 								<i class="glyphicon glyphicon-star"></i>
@@ -39,10 +50,10 @@
 							</div>
 							<span class="review-no">41 đánh giá</span>
 						</div>
-						<p class="product-description">Sản phẩm đi êm ái. Thoải mái chống hôi chân. Thích hợp cho đá bóng</p>
-						<h4 class="price">Giá bán: <span><?php echo number_format(588000)." VNĐ"?></span></h4>
-						<h4 class="price">Giá bán TT: <span><del><?php echo number_format(720000)." VNĐ"?></del></span></h4>
-						<p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+						<p class="product-description"><?php echo $row['tieu_de'] ?></p>
+						<h4 class="price">Giá bán: <span><?php echo number_format($row['gia_ban'])." VNĐ"?></span></h4>
+						<h4 class="price">Giá bán TT: <span><del><?php echo number_format($row['gia_de_xuat'])." VNĐ"?></del></span></h4>
+						<p class="vote"><strong>91%</strong> người dùng đánh giá <strong>(87 votes)</strong></p>
 						<h5 class="sizes">Kích thước:
 							<span class="size" data-toggle="tooltip" title="small">s</span>
 							<span class="size" data-toggle="tooltip" title="medium">m</span>
@@ -71,8 +82,7 @@
 				</div>
 
 				<div class="panel panel-default">
-					<div class="panel-heading">Panel Heading</div>
-					<div class="panel-body">Panel Content</div>
+					<div class="panel-body"><?php echo $row['chi_tiet_san_pham']?></div>
 				</div>
 			</div>
 		</div>

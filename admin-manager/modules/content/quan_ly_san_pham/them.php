@@ -1,10 +1,16 @@
+<?php
+$sql_loai = "SELECT * FROM phan_loai_nho WHERE tinh_trang = 1";
+$result_loai = mysqli_query($conn, $sql_loai);
+$sql_hieu = "SELECT * FROM thuong_hieu WHERE tinh_trang";
+$result_hieu = mysqli_query($conn, $sql_hieu);
+?>
 <div class="container-fluid bg-success ">
 	<div class="row bg-primary">
 		<h2 class="text-center" >Thêm sản phẩm</h2>
 	</div>
 	<div class="container">
 		<div class="col-sm-8 col-sm-offset-2" style="margin-top: 50px;">
-			<form class="form-horizontal" action="modules/content/khuyen_mai/xu_ly.php" method="post" enctype="multipart/form-data">
+			<form class="form-horizontal" action="modules/content/quan_ly_san_pham/xu_ly.php" method="post" enctype="multipart/form-data">
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="ma_sp">Mã sản phẩm</label>
 					<div class="col-sm-10">
@@ -38,8 +44,14 @@
 				<div class="form-group">        
 					<label class="control-label col-sm-2" for="noi_dung">Chi tiết:</label>
 					<div class=" col-sm-10">
-						<textarea name="noi_dung" class="form-control"  id = "noi_dung"required>
+						<textarea name="noi_dung" class="form-control" rows="10"  id = "noi_dung"required>
 						</textarea>
+					</div>
+				</div>
+				<div class="form-group"> 
+					<label class="control-label col-sm-2" for="so_luong">Số lượng</label>
+					<div class="col-sm-4">
+						<input type="number" name="so_luong" min="1" value="1" class="form-control" placeholder="" id="so_luong">
 					</div>
 				</div>
 				<div class="form-group">
@@ -54,10 +66,10 @@
 				<div class="form-group">
 					<label class="control-label col-sm-2">Hình ảnh sản phẩm</label>
 					<div class="col-sm-10">
-						<input type="file" id = "hinh_anh_sp" name="hinh_anh_sp[]" multiple="multiple"  accept="image/*" required>
+						<input type="file" id = "hinh_anh_sp" name="hinh_anh_sp[]" multiple  accept="image/*" required>
 					</div>
 					<div class="row">
-						<img src="" id="view_hinh_anh" alt="Red dot" width="100px" height="100px" class="col-sm-offset-2" >
+						<img src="" id="view_hinh_anh1" alt="Red dot" width="100px" height="100px" class="col-sm-offset-2" >
 					</div>
 				</div>
 				<div class="form-group"> 
@@ -69,18 +81,25 @@
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="thuong_hieu">Thương hiệu</label>
 					<div class="col-sm-4">
-						<select name="thuong_hieu" class="form-control">
-							<option value="1">Kích hoạt</option>
-							<option value="0">Không kích hoạt</option>
+						<select name="thuong_hieu" class="form-control col-sm-4">
+							<?php
+							while($row_loai = mysqli_fetch_assoc($result_hieu)){
+								echo '<option value="'.$row_loai['id_thuong_hieu'].'">'.$row_loai['ten_thuong_hieu'].'</option>';
+							}
+							?>
+
 						</select>
 					</div>
-				</di>
+				</div>
 				<div class="form-group ">
 					<label class="control-label col-sm-2" for="loai_sp">Loại sản phẩm</label>
 					<div class="col-sm-4">
 						<select name="loai_sp" class="form-control">
-							<option value="1">Kích hoạt</option>
-							<option value="0">Không kích hoạt</option>
+							<?php
+							while($row_loai = mysqli_fetch_assoc($result_loai)){
+								echo '<option value="'.$row_loai['id'].'">'.$row_loai['ten'].'</option>';
+							}
+							?>
 						</select>
 					</div>
 				</div>
@@ -93,14 +112,14 @@
 						</select>
 					</div>
 				</div>
-				<p class="col-sm-offset-2"><?php
+				<p class="col-sm-offset-2" style="color: red"><?php
 				if(isset($_GET['error'])){
 					echo "Lỗi thêm sản phẩm";
 				}
 				?></p>
 				<div class="form-group">        
 					<div class="col-sm-offset-2 col-sm-10">
-						<button  class="btn btn-primary" name="them" value="them">Thêm</button>
+						<button  class="btn btn-primary col-sm-4" type="submit" name="them" value="them">Thêm</button>
 					</div>
 				</div>
 			</form>

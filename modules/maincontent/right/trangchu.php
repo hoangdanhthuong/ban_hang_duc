@@ -12,6 +12,12 @@
 	height: 20px;
 }
 </style>
+<?php 
+$sql_new = "SELECT * FROM san_pham WHERE tinh_trang = 1 order by id_san_pham limit 8";
+$resutl = mysqli_query($conn, $sql_new);
+$sql_loai_lon = "SELECT * FROM phan_loai_lon WHERE tinh_trang = 1";
+$result_loai_lon = mysqli_query($conn,$sql_loai_lon);
+?>
 <div class="container">
 	<!-- title -->
 	<div class="new-product">
@@ -23,1235 +29,148 @@
 		<!-- List product -->
 		<div class="content ">
 			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/dung_cu/1.jpg" alt="" >
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
-							</div>
-							
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/giay_the_thao/1-1.jpg" alt="" >
-						<div class="caption" >
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
-							</div>
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
-							</div>
-							<p>Sản phẩm được sử dụng nhiều nhất</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
-							</div>
-							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
+				<?php 
 
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/dung_cu/1.jpg" alt="" >
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
-							</div>
-							
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/giay_the_thao/1-1.jpg" alt="" >
-						<div class="caption" >
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
-							</div>
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
-							</div>
-							<p>Sản phẩm được sử dụng nhiều nhất</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
-							</div>
-							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
+				if(mysqli_num_rows($resutl)==0){
+					echo "<h3>Hiện tại chưa có sản phẩm..</h3>";
+				}else{
+					$target = "admin-manager/modules/content/quan_ly_san_pham/uploads/";
+					while ($row = mysqli_fetch_assoc($resutl)) {
+						?>
+						<div class="col-md-3">
+							<div class="thumbnail">
+								<img src="<?php echo $target.$row['hinh_anh_tieu_de']?>" alt="<?php echo $target.$row['hinh_anh_tieu_de']?>" >
+								<div class="caption">
+									<div class="row" style="height: 50px">
+										<h4 class="pull-right"><?php echo number_format($row['gia_ban'])."VNĐ"?></h4>
+										<h4><a href="?xem=chitietsanpham&id=<?php echo $row['id_san_pham']?>"><?php echo $row['ten_san_pham']?></a></h4>	
+									</div>
 
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-			</div>
-			<!-- Modal -->
-			<div class="modal fade" id="product_view" role="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-							<h3 class="modal-title">HTML5 is a markup language</h3>
-						</div>
-						<div class="modal-body">
-							<div class="row">
-								<div class="col-md-6 product_img">
-									<img src="http://img.bbystatic.com/BestBuy_US/images/products/5613/5613060_sd.jpg" class="img-responsive">
+									<p><b>Mã sản phẩm </b><span style="text-transform: uppercase;"><?php echo $row['ma_san_pham']?></span></p>
 								</div>
-								<div class="col-md-6 product_content">
-									<h4>Product Id: <span>51526</span></h4>
-									<div class="rating">
+								<div class="ratings">
+									<p>
 										<span class="glyphicon glyphicon-star"></span>
 										<span class="glyphicon glyphicon-star"></span>
 										<span class="glyphicon glyphicon-star"></span>
 										<span class="glyphicon glyphicon-star"></span>
 										<span class="glyphicon glyphicon-star"></span>
-										(10 reviews)
-									</div>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-									<h3 class="cost"><span class="glyphicon glyphicon-usd"></span> 75.00 <small class="pre-cost"><span class="glyphicon glyphicon-usd"></span> 60.00</small></h3>
-									<div class="row">
-										<div class="col-md-4 col-sm-6 col-xs-12">
-											<select class="form-control" name="select">
-												<option value="" selected="">Color</option>
-												<option value="black">Black</option>
-												<option value="white">White</option>
-												<option value="gold">Gold</option>
-												<option value="rose gold">Rose Gold</option>
-											</select>
-										</div>
-										<!-- end col -->
-										<div class="col-md-4 col-sm-6 col-xs-12">
-											<select class="form-control" name="select">
-												<option value="">Capacity</option>
-												<option value="">16GB</option>
-												<option value="">32GB</option>
-												<option value="">64GB</option>
-												<option value="">128GB</option>
-											</select>
-										</div>
-										<!-- end col -->
-										<div class="col-md-4 col-sm-12">
-											<select class="form-control" name="select">
-												<option value="" selected="">QTY</option>
-												<option value="">1</option>
-												<option value="">2</option>
-												<option value="">3</option>
-											</select>
-										</div>
-										<!-- end col -->
-									</div>
-									<div class="space-ten"></div>
-									<div class="btn-ground">
-										<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button>
-										<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Add To Wishlist</button>
-									</div>
+										(15 reviews)
+									</p>
 								</div>
+								<div class="space-ten"></div>
+								<div class="btn-ground text-center">
+									<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-<?php echo $row['id_san_pham']?> " id="btn-buy-now-<?php echo $row['id_san_pham']?>"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
+								</div>
+								<div class="space-ten"></div>
 							</div>
 						</div>
-					</div>
-				</div>
+						<?php
+					}
+				}
+				?>
+				
 			</div>
 		</div>
 	</div>
 	<!-- title -->
-	<div class="new-product">
-		<div class="row">
-			<div class="linkview">
-				<p>Quần - Áo thể thao</p>
-			</div>
-		</div>
-		<!-- List product -->
-		<div class="content">
-			
+	<?php 
+	while ($row_loai_lon = mysqli_fetch_assoc($result_loai_lon) ) {
+		?>
+		<div class="new-product">
 			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/dung_cu/1.jpg" alt="" >
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
-							</div>
-							
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/giay_the_thao/1-1.jpg" alt="" >
-						<div class="caption" >
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
-							</div>
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
-							</div>
-							<p>Sản phẩm được sử dụng nhiều nhất</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
-							</div>
-							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
-
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
+				<div class="linkview">
+					<p><?php echo $row_loai_lon['ten']?></p>
 				</div>
 			</div>
-			
-			
-			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/dung_cu/1.jpg" alt="" >
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
-							</div>
-							
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/giay_the_thao/1-1.jpg" alt="" >
-						<div class="caption" >
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
-							</div>
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
-							</div>
-							<p>Sản phẩm được sử dụng nhiều nhất</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
-							</div>
-							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
+			<!-- List product -->
+			<div class="content ">
+				<div class="row">
+					<?php 
+					$sql_san_pham = "SELECT a.*, b.id as id_phan_loai_lon FROM san_pham a, phan_loai_lon b, phan_loai_nho c WHERE a.id_loai_sp = c.id and b.id =c.id_phan_loai_lon  AND a.tinh_trang = 1 AND b.id =".$row_loai_lon['id']."  order by id_san_pham limit 8";
+					$result_san_pham = mysqli_query($conn, $sql_san_pham);
+					if(mysqli_num_rows($result_san_pham)==0){
+						echo "<h3>Hiện tại chưa có sản phẩm..</h3>";
+					}else{
+						
+						while ($row = mysqli_fetch_assoc($result_san_pham)) {
+							?>
+							<div class="col-md-3">
+								<div class="thumbnail">
+									<img src="<?php echo $target.$row['hinh_anh_tieu_de']?>" alt="<?php echo $target.$row['hinh_anh_tieu_de']?>" >
+									<div class="caption">
+										<div class="row" style="height: 50px">
+											<h4 class="pull-right"><?php echo number_format($row['gia_ban'])."VNĐ"?></h4>
+											<h4><a href="?xem=chitietsanpham&id=<?php echo $row['id_san_pham']?>"><?php echo $row['ten_san_pham']?></a></h4>	
+										</div>
 
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Modal -->
-			<div class="modal fade" id="product_view" role="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-							<h3 class="modal-title">HTML5 is a markup language</h3>
-						</div>
-						<div class="modal-body">
-							<div class="row">
-								<div class="col-md-6 product_img">
-									<img src="http://img.bbystatic.com/BestBuy_US/images/products/5613/5613060_sd.jpg" class="img-responsive">
-								</div>
-								<div class="col-md-6 product_content">
-									<h4>Product Id: <span>51526</span></h4>
-									<div class="rating">
-										<span class="glyphicon glyphicon-star"></span>
-										<span class="glyphicon glyphicon-star"></span>
-										<span class="glyphicon glyphicon-star"></span>
-										<span class="glyphicon glyphicon-star"></span>
-										<span class="glyphicon glyphicon-star"></span>
-										(10 reviews)
+										<p><b>Mã sản phẩm </b><span style="text-transform: uppercase;"><?php echo $row['ma_san_pham']?></span></p>
 									</div>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-									<h3 class="cost"><span class="glyphicon glyphicon-usd"></span> 75.00 <small class="pre-cost"><span class="glyphicon glyphicon-usd"></span> 60.00</small></h3>
-									<div class="row">
-										<div class="col-md-4 col-sm-6 col-xs-12">
-											<select class="form-control" name="select">
-												<option value="" selected="">Color</option>
-												<option value="black">Black</option>
-												<option value="white">White</option>
-												<option value="gold">Gold</option>
-												<option value="rose gold">Rose Gold</option>
-											</select>
-										</div>
-										<!-- end col -->
-										<div class="col-md-4 col-sm-6 col-xs-12">
-											<select class="form-control" name="select">
-												<option value="">Capacity</option>
-												<option value="">16GB</option>
-												<option value="">32GB</option>
-												<option value="">64GB</option>
-												<option value="">128GB</option>
-											</select>
-										</div>
-										<!-- end col -->
-										<div class="col-md-4 col-sm-12">
-											<select class="form-control" name="select">
-												<option value="" selected="">QTY</option>
-												<option value="">1</option>
-												<option value="">2</option>
-												<option value="">3</option>
-											</select>
-										</div>
-										<!-- end col -->
+									<div class="ratings">
+										<p>
+											<span class="glyphicon glyphicon-star"></span>
+											<span class="glyphicon glyphicon-star"></span>
+											<span class="glyphicon glyphicon-star"></span>
+											<span class="glyphicon glyphicon-star"></span>
+											<span class="glyphicon glyphicon-star"></span>
+											(15 reviews)
+										</p>
 									</div>
 									<div class="space-ten"></div>
-									<div class="btn-ground">
-										<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button>
-										<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Add To Wishlist</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- title -->
-	<div class="new-product">
-		<div class="row">
-			<div class="linkview">
-				<p>Giày thể thao</p>
-			</div>
-		</div>
-		<!-- List product -->
-		<div class="content">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/dung_cu/1.jpg" alt="" >
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
-							</div>
-							
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/giay_the_thao/1-1.jpg" alt="" >
-						<div class="caption" >
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
-							</div>
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
-							</div>
-							<p>Sản phẩm được sử dụng nhiều nhất</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
-							</div>
-							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
-
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/dung_cu/1.jpg" alt="" >
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
-							</div>
-							
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/giay_the_thao/1-1.jpg" alt="" >
-						<div class="caption" >
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
-							</div>
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
-							</div>
-							<p>Sản phẩm được sử dụng nhiều nhất</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
-							</div>
-							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
-
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Modal -->
-			<div class="modal fade" id="product_view" role="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-							<h3 class="modal-title">HTML5 is a markup language</h3>
-						</div>
-						<div class="modal-body">
-							<div class="row">
-								<div class="col-md-6 product_img">
-									<img src="http://img.bbystatic.com/BestBuy_US/images/products/5613/5613060_sd.jpg" class="img-responsive">
-								</div>
-								<div class="col-md-6 product_content">
-									<h4>Product Id: <span>51526</span></h4>
-									<div class="rating">
-										<span class="glyphicon glyphicon-star"></span>
-										<span class="glyphicon glyphicon-star"></span>
-										<span class="glyphicon glyphicon-star"></span>
-										<span class="glyphicon glyphicon-star"></span>
-										<span class="glyphicon glyphicon-star"></span>
-										(10 reviews)
-									</div>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-									<h3 class="cost"><span class="glyphicon glyphicon-usd"></span> 75.00 <small class="pre-cost"><span class="glyphicon glyphicon-usd"></span> 60.00</small></h3>
-									<div class="row">
-										<div class="col-md-4 col-sm-6 col-xs-12">
-											<select class="form-control" name="select">
-												<option value="" selected="">Color</option>
-												<option value="black">Black</option>
-												<option value="white">White</option>
-												<option value="gold">Gold</option>
-												<option value="rose gold">Rose Gold</option>
-											</select>
-										</div>
-										<!-- end col -->
-										<div class="col-md-4 col-sm-6 col-xs-12">
-											<select class="form-control" name="select">
-												<option value="">Capacity</option>
-												<option value="">16GB</option>
-												<option value="">32GB</option>
-												<option value="">64GB</option>
-												<option value="">128GB</option>
-											</select>
-										</div>
-										<!-- end col -->
-										<div class="col-md-4 col-sm-12">
-											<select class="form-control" name="select">
-												<option value="" selected="">QTY</option>
-												<option value="">1</option>
-												<option value="">2</option>
-												<option value="">3</option>
-											</select>
-										</div>
-										<!-- end col -->
+									<div class="btn-ground text-center">
+										<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-<?php echo $row['id_san_pham']?> " id="btn-buy-now-<?php echo $row['id_san_pham']?>"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 									</div>
 									<div class="space-ten"></div>
-									<div class="btn-ground">
-										<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button>
-										<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Add To Wishlist</button>
-									</div>
 								</div>
 							</div>
-						</div>
-					</div>
+							<?php
+						}
+					}
+					?>
+					
 				</div>
+				
 			</div>
 		</div>
-	</div>
-	<!-- title -->
-	<div class="new-product">
-		<div class="row">
-			<div class="linkview">
-				<p>Phụ kiện thể thao</p>
-			</div>
-		</div>
-		<!-- List product -->
-		<div class="content">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/dung_cu/1.jpg" alt="" >
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
+		<?php
+	}
+	?>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="product_view" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+					<h3 class="modal-title">Quần đẹp tuyệt vời</h3>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-6 product_img">
+							<img src="images/quan_ao/1-1.jpg" class="img-responsive">
+						</div>
+						<div class="col-md-6 product_content">
+							<h4>Mã sản phẩm: <span>51526</span></h4>
+							<div class="rating">
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								(10 reviews)
 							</div>
+							<div style="height: 200px; position: relative;">
+								
+								<p>Áo tuyệt đẹp</p>
+							</div>
+							<h3 class="cost"><span class="glyphicon glyphicon-vnd"></span> <?php echo number_format(800000).' VNĐ'?> <small class="pre-cost"><span class="glyphicon glyphicon-vnd"></span><?php echo number_format(900000).' VNĐ'?> </small></h3>
 							
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/giay_the_thao/1-1.jpg" alt="" >
-						<div class="caption" >
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
-							</div>
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
-							</div>
-							<p>Sản phẩm được sử dụng nhiều nhất</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
-							</div>
-							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
-
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/dung_cu/1.jpg" alt="" >
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Vợt cầu lông siêu bền</a></h4>	
-							</div>
-							
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-1 " id="btn-buy-now-1"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/giay_the_thao/1-1.jpg" alt="" >
-						<div class="caption" >
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(95000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Giày thể thao</a></h4>
-							</div>
-							<p>Sản phẩm của tập đoàn hòa phát</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-2"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/0723701300.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(105000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Bóng chuyền động lực</a></h4>
-							</div>
-							<p>Sản phẩm được sử dụng nhiều nhất</p>
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-9 " id="btn-buy-now-3"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img src="images/quan_ao/1.jpg" alt="" class="img-responsive">
-						<div class="caption">
-							<div class="row" style="height: 50px">
-								<h4 class="pull-right"><?php echo number_format(80000)."VNĐ"?></h4>
-								<h4><a href="?xem=chitietsanpham&id=">Quần thể thao </a></h4>
-							</div>
-							<p >Mặc mát vào mùa hè ấm vào mùa đông</p>	
-
-						</div>
-						<div class="ratings">
-							<p>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(15 reviews)
-							</p>
-						</div>
-						<div class="space-ten"></div>
-						<div class="btn-ground text-center">
-							<a href="javascript:void(0)"  id="btn-buy-now-9" class="btn btn-primary btn-buy-now-6"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
-						</div>
-						<div class="space-ten"></div>
-					</div>
-				</div>
-			</div>
-			
-			<!-- Modal -->
-			<div class="modal fade" id="product_view" role="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-							<h3 class="modal-title">HTML5 is a markup language</h3>
-						</div>
-						<div class="modal-body">
-							<div class="row">
-								<div class="col-md-6 product_img">
-									<img src="http://img.bbystatic.com/BestBuy_US/images/products/5613/5613060_sd.jpg" class="img-responsive">
-								</div>
-								<div class="col-md-6 product_content">
-									<h4>Product Id: <span>51526</span></h4>
-									<div class="rating">
-										<span class="glyphicon glyphicon-star"></span>
-										<span class="glyphicon glyphicon-star"></span>
-										<span class="glyphicon glyphicon-star"></span>
-										<span class="glyphicon glyphicon-star"></span>
-										<span class="glyphicon glyphicon-star"></span>
-										(10 reviews)
-									</div>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-									<h3 class="cost"><span class="glyphicon glyphicon-usd"></span> 75.00 <small class="pre-cost"><span class="glyphicon glyphicon-usd"></span> 60.00</small></h3>
-									<div class="row">
-										<div class="col-md-4 col-sm-6 col-xs-12">
-											<select class="form-control" name="select">
-												<option value="" selected="">Color</option>
-												<option value="black">Black</option>
-												<option value="white">White</option>
-												<option value="gold">Gold</option>
-												<option value="rose gold">Rose Gold</option>
-											</select>
-										</div>
-										<!-- end col -->
-										<div class="col-md-4 col-sm-6 col-xs-12">
-											<select class="form-control" name="select">
-												<option value="">Capacity</option>
-												<option value="">16GB</option>
-												<option value="">32GB</option>
-												<option value="">64GB</option>
-												<option value="">128GB</option>
-											</select>
-										</div>
-										<!-- end col -->
-										<div class="col-md-4 col-sm-12">
-											<select class="form-control" name="select">
-												<option value="" selected="">QTY</option>
-												<option value="">1</option>
-												<option value="">2</option>
-												<option value="">3</option>
-											</select>
-										</div>
-										<!-- end col -->
-									</div>
-									<div class="space-ten"></div>
-									<div class="btn-ground">
-										<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart</button>
-										<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Add To Wishlist</button>
-									</div>
-								</div>
+							<div class="space-ten"></div>
+							<div class="btn-ground">
+								<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Thêm vào giỏ</button>
+								<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Yêu thích</button>
 							</div>
 						</div>
 					</div>

@@ -11,7 +11,7 @@ $result = mysqli_query($conn,$sql);
 		<div class="row">
 			<h3><a href="index.php?quanly=sanpham&ac=them"  class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>Thêm</a></h3>
 		</div>
-		<div class="row">
+		<div class="row table-responsive">
 			<table class="table dataTable table-hover table-bordered" id="table_san_pham">
 				<thead class="bg-primary">
 					<tr class="text-center">
@@ -34,8 +34,8 @@ $result = mysqli_query($conn,$sql);
 					<?php
 					while($row = mysqli_fetch_assoc($result)){
 						?>
-						<tr id = "row_<?php echo $row['id']?>">
-							<td ><?php echo $row['id']?></td>
+						<tr id = "row_<?php echo $row['id_id_san_pham']?>">
+							<td ><?php echo $row['id_san_pham']?></td>
 							<td class="text-left"><?php echo $row['ma_san_pham']?></td>
 							<td><?php echo $row['ten_san_pham']?></td>
 							<td><?php echo $row['gia_de_xuat']?></td>
@@ -43,8 +43,8 @@ $result = mysqli_query($conn,$sql);
 							<td><?php echo $row['so_luong']?></td>
 							<td><?php echo $row['thu_tu']?></td>
 							<td><?php echo $row['tinh_trang']?></td>
-							<td><a href="index.php?quanly=sanpham&ac=sua&id=<?php echo $row['id']?>" class="btn_them" ><i class="glyphicon glyphicon-edit"></i></a></td>
-							<td><a href="modules/content/quan_ly_san_pham/xu_ly.php?id=<?php echo $row['id']?>" class="btn_xoa"><i class="glyphicon glyphicon-trash"></i></a></td>
+							<td><a href="index.php?quanly=sanpham&ac=sua&id=<?php echo $row['id_san_pham']?>" class="btn_sua" ><i class="glyphicon glyphicon-edit"></i></a></td>
+							<td><a href="modules/content/quan_ly_san_pham/xu_ly.php?id=<?php echo $row['id_san_pham']?>" class="btn_xoa"><i class="glyphicon glyphicon-trash"></i></a></td>
 						</tr>
 						<?php
 					}

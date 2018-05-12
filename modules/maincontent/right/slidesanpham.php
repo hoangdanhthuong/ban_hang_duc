@@ -1,4 +1,4 @@
-<div class="container" id="slidesanpham" style="margin-bottom: 100px">
+<div class="container" id="slidesanpham" style="">
   <div class="row">
     <div class="tieude bg-primary ">
       <h3 class="text-center">Sản phẩm cùng loại</h3>

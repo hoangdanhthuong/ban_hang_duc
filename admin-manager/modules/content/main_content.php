@@ -16,6 +16,6 @@ if($tam=='phanloailon'){
 }elseif($tam=='hieu_sp'){
   include('modules/content/quan_ly_hieu_sp/main.php');
 }else{
-  echo "hello world";
+  include("modules/content/dashboard.php");
 }
 ?>

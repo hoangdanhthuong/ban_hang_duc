@@ -63,8 +63,13 @@ $(document).on('click',".btn_xoa", function(){
 			method: "POST",
 			cache: false,
 			data: {id:id},
-			success: function(){
-				$('#table_phan_loai_nho').find("#row_"+id).remove();
+			success: function(data){
+				if(data){
+					alert(data);	
+				}else{
+					$('#table_phan_loai_nho').find("#row_"+id).remove();
+				}
+				
 			}
 		});
 	}

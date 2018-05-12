@@ -19,7 +19,6 @@ if(isset($_POST['check'])){
 				echo "Đã tồn tại.";
 			}	
 		}
-		
 	}
 	if($_POST['check']==1){
 		$id = $_POST['id'];
