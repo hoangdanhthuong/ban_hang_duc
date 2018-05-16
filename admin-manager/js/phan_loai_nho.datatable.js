@@ -1,5 +1,10 @@
 $(document).ready(function(){
-	$('#table_phan_loai_nho').DataTable();
+	$('#table_phan_loai_nho').DataTable({
+		'columnDefs':[
+		{'searable':false,'orderable':false,'targets': 5},
+		{'searable':false,'orderable':false,'targets': 6},
+			]
+	});
 })
 $(document).on('click', '#btn_them_phan_loai_nho', function(){
 	var name = $.trim($('#input_tao_ten').val());

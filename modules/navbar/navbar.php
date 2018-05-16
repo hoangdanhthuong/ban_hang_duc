@@ -1,4 +1,5 @@
 <?php 
+ob_start();
 include("admin-manager/modules/config.php");
 $sql = "SELECT * FROM phan_loai_lon WHERE tinh_trang = 1 order by thu_tu";
 $result = mysqli_query($conn, $sql);
@@ -28,7 +29,7 @@ $result = mysqli_query($conn, $sql);
 
 								$result_1 = mysqli_query($conn, $sql_1);
 								while($row_1 = mysqli_fetch_assoc($result_1)){
-									echo '<li><a href="#">'.$row_1['ten'].'</a></li>';
+									echo '<li><a href="index.php?xem=loaisp&id='.$row_1['id'].'">'.$row_1['ten'].'</a></li>';
 								}
 								?>
 
@@ -38,7 +39,7 @@ $result = mysqli_query($conn, $sql);
 					}
 					?>
 					
-					<li><a href="">Liên hệ</a></li>
+					<li><a href="index.php?xem=gioithieu">Giới thiệu</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li ><a href="?xem=giohang" id="cart-shop"><span class="badge" id="count-item" >

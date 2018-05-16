@@ -1,5 +1,10 @@
 $(document).ready(function(){
-	$('#table_khuyen_mai').DataTable();
+	$('#table_khuyen_mai').DataTable({
+		'columnDefs':[
+		{'searable':false,'orderable':false,'targets': 6},
+		{'searable':false,'orderable':false,'targets': 7},
+			]
+	});
 });
 function readURL(input) {
 	if (input.files && input.files[0]) {

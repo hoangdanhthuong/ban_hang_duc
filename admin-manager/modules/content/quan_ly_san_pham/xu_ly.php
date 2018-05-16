@@ -11,7 +11,7 @@ $so_luong = $_POST['so_luong'];
 $tinh_trang = $_POST['tinh_trang'];
 $loai_sp = $_POST['loai_sp'];
 $thuong_hieu = $_POST['thuong_hieu'];
-
+$kich_thuoc = strtoupper(trim($_POST['kich_thuoc']));
 $sql_check = "SELECT * FROM san_pham WHERE ma_san_pham = '".$ma_sp."'";
 
 if(isset($_POST['them'])){
@@ -19,7 +19,7 @@ if(isset($_POST['them'])){
 	if(check_input($conn, $sql_check)){
 		$hinh_anh = save_file('hinh_anh');
 		$hinh_anh_sp = save_files('hinh_anh_sp');
-		$sql = "INSERT INTO san_pham( ma_san_pham, ten_san_pham, tieu_de,  chi_tiet_san_pham, hinh_anh_tieu_de, hinh_anh_sp, gia_de_xuat, gia_ban, so_luong, thu_tu, tinh_trang, id_loai_sp, id_hieu_sp) VALUES ('".$ma_sp."','".$ten_sp."','".$tieu_de."', '".$noi_dung."','".$hinh_anh."','".$hinh_anh_sp."','".$gia_de_xuat."','".$gia_ban."','".$so_luong."','".$thu_tu."','".$tinh_trang."', '".$loai_sp."', '".$thuong_hieu."')";
+		$sql = "INSERT INTO san_pham( ma_san_pham, ten_san_pham, tieu_de,  chi_tiet_san_pham, hinh_anh_tieu_de, hinh_anh_sp, gia_de_xuat, gia_ban, so_luong, thu_tu, tinh_trang, id_loai_sp, id_hieu_sp, kich_thuoc) VALUES ('".$ma_sp."','".$ten_sp."','".$tieu_de."', '".$noi_dung."','".$hinh_anh."','".$hinh_anh_sp."','".$gia_de_xuat."','".$gia_ban."','".$so_luong."','".$thu_tu."','".$tinh_trang."', '".$loai_sp."', '".$thuong_hieu."', '".$kich_thuoc."')";
 		if(!mysqli_query($conn, $sql)){
 			header("location: ../../../index.php?quanly=sanpham&ac=them&error=1");
 		}else{
@@ -34,11 +34,11 @@ if(isset($_POST['them'])){
 	$hinh_anh = save_file('hinh_anh');
 	$hinh_anh_sp = save_files('hinh_anh_sp');
 	if($hinh_anh == '' && $hinh_anh_sp == ''){
-		$sql = "UPDATE san_pham SET ma_san_pham='".$ma_sp."',ten_san_pham='".$ten_sp."',tieu_de='".$tieu_de."',chi_tiet_san_pham='".$noi_dung."',gia_de_xuat='".$gia_de_xuat."',gia_ban='".$gia_ban."',so_luong='".$so_luong."',id_loai_sp='".$loai_sp."',id_hieu_sp='".$thuong_hieu."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."' WHERE id_san_pham=".$id;
+		$sql = "UPDATE san_pham SET ma_san_pham='".$ma_sp."',ten_san_pham='".$ten_sp."',tieu_de='".$tieu_de."',chi_tiet_san_pham='".$noi_dung."',gia_de_xuat='".$gia_de_xuat."',gia_ban='".$gia_ban."',so_luong='".$so_luong."',id_loai_sp='".$loai_sp."',id_hieu_sp='".$thuong_hieu."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."',kich_thuoc='".$kich_thuoc."' WHERE id_san_pham=".$id;
 	}elseif($hinh_anh == '' && $hinh_anh_sp!=''){
-		$sql = "UPDATE san_pham SET ma_san_pham='".$ma_sp."',ten_san_pham='".$ten_sp."',tieu_de='".$tieu_de."',chi_tiet_san_pham='".$noi_dung."',hinh_anh_sp='".$hinh_anh_sp."',gia_de_xuat='".$gia_de_xuat."',gia_ban='".$gia_ban."',so_luong='".$so_luong."',id_loai_sp='".$loai_sp."',id_hieu_sp='".$thuong_hieu."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."' WHERE id_san_pham=".$id;
+		$sql = "UPDATE san_pham SET ma_san_pham='".$ma_sp."',ten_san_pham='".$ten_sp."',tieu_de='".$tieu_de."',chi_tiet_san_pham='".$noi_dung."',hinh_anh_sp='".$hinh_anh_sp."',gia_de_xuat='".$gia_de_xuat."',gia_ban='".$gia_ban."',so_luong='".$so_luong."',id_loai_sp='".$loai_sp."',id_hieu_sp='".$thuong_hieu."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."',kich_thuoc='".$kich_thuoc."' WHERE id_san_pham=".$id;
 	}elseif($hinh_anh_sp == '' && $hinh_anh !=''){
-		$sql = "UPDATE san_pham SET ma_san_pham='".$ma_sp."',ten_san_pham='".$ten_sp."',tieu_de='".$tieu_de."',chi_tiet_san_pham='".$noi_dung."',hinh_anh_tieu_de='".$hinh_anh."',gia_de_xuat='".$gia_de_xuat."',gia_ban='".$gia_ban."',so_luong='".$so_luong."',id_loai_sp='".$loai_sp."',id_hieu_sp='".$thuong_hieu."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."' WHERE id_san_pham=".$id;
+		$sql = "UPDATE san_pham SET ma_san_pham='".$ma_sp."',ten_san_pham='".$ten_sp."',tieu_de='".$tieu_de."',chi_tiet_san_pham='".$noi_dung."',hinh_anh_tieu_de='".$hinh_anh."',gia_de_xuat='".$gia_de_xuat."',gia_ban='".$gia_ban."',so_luong='".$so_luong."',id_loai_sp='".$loai_sp."',id_hieu_sp='".$thuong_hieu."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."',kich_thuoc='".$kich_thuoc."' WHERE id_san_pham=".$id;
 	}else{
 		$sql = "UPDATE san_pham SET ma_san_pham='".$ma_sp."',ten_san_pham='".$ten_sp."',tieu_de='".$tieu_de."',chi_tiet_san_pham='".$noi_dung."',hinh_anh_tieu_de='".$hinh_anh."',hinh_anh_sp='".$hinh_anh_sp."',gia_de_xuat='".$gia_de_xuat."',gia_ban='".$gia_ban."',so_luong='".$so_luong."',id_loai_sp='".$loai_sp."',id_hieu_sp='".$thuong_hieu."',thu_tu='".$thu_tu."',tinh_trang='".$tinh_trang."' WHERE id_san_pham=".$id;
 	}
@@ -75,6 +75,13 @@ function check_input($conn, $sql, $id = -1){
 		}else{
 			return false;
 		}
+	}
+}
+function check_file($input){
+	if($_FILES[$input]['name'] != ''){
+		return $_FILES[$input]['size'] < 2097152 && $_FILES[$input]['size']>0;	
+	}else{
+		return false;
 	}
 }
 function save_file($input,$i=-1){

@@ -1,5 +1,5 @@
 
-<a data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a>
+<a data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in" id="btn_login"></span> Đăng nhập</a>
 <!-- Modal -->
 <div class="modal fade" id="login" role="dialog">
 	<div class="modal-dialog modal-md">
@@ -15,7 +15,7 @@
 					<form role="form">
 						<fieldset>
 							<div class="input-group">
-								<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input class="form-control" placeholder="E-mail" name="email" type="email" autofocus id="email-user" required="required">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input class="form-control" placeholder="Tên đăng nhập.." name="username_login" type="text" autofocus id="username_login" required minlength="5">
 							</div>
 							<p id="error-email"></p>
 							<div class="input-group">
@@ -34,7 +34,8 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<p>Chưa có tài khoản? <a id="btn_dang_ky">Đăng ký</a></p>
+				<button type="button" class="btn btn-default" id="btn_close_login" data-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>

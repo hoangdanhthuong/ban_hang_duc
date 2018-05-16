@@ -82,6 +82,12 @@ $target_name = "modules/content/quan_ly_san_pham/uploads/";
 					<input type="number" name="thu_tu" min="0" value="0" class="form-control" placeholder="" id="thu_tu" value="<?php echo $row_san_pham['thu_tu']?>">
 				</div>
 			</div>
+			<div class="form-group"> 
+				<label class="control-label col-sm-2" for="kich_thuoc">Kích thước</label>
+				<div class="col-sm-4">
+					<input type="text" name="kich_thuoc" value="<?php echo $row_san_pham['kich_thuoc']?>" class="form-control" placeholder="" id="kich_thuoc">
+				</div>
+			</div>
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="thuong_hieu">Thương hiệu</label>
 				<div class="col-sm-4">
@@ -122,13 +128,13 @@ $target_name = "modules/content/quan_ly_san_pham/uploads/";
 				<div class="col-sm-4">
 					<select name="tinh_trang" class="form-control" id="tinh_trang">
 						<?php
-							if($row_san_pham['tinh_trang']==1){
-								echo '<option value="1" selected>Kích hoạt</option>
-						<option value="0">Không kích hoạt</option>';
-							}else{
-								echo '<option value="1">Kích hoạt</option>
-						<option value="0" selected>Không kích hoạt</option>';
-							}
+						if($row_san_pham['tinh_trang']==1){
+							echo '<option value="1" selected>Kích hoạt</option>
+							<option value="0">Không kích hoạt</option>';
+						}else{
+							echo '<option value="1">Kích hoạt</option>
+							<option value="0" selected>Không kích hoạt</option>';
+						}
 						?>
 						
 					</select>

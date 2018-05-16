@@ -30,15 +30,16 @@
               </ul>
             </a>
           </li>
-          <li><a href="#">Tin tức</a></li>
+          <li><a href="index.php?quanly=tintuc">Tin tức</a></li>
           <li><a href="index.php?quanly=khuyenmai">Khuyến mại</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Thống kê
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Sản phẩm</a></li>
-                <li><a href="#">Đơn hàng</a></li>
-                <li><a href="#">Doanh thu</a></li>
+                <li><a href="index.php?quanly=thongkesanpham">Sản phẩm</a></li>
+                <li><a href="index.php?quanly=donhang">Đơn hàng</a></li>
+                <li><a href="index.php?quanly=doanhthu">Doanh thu</a></li>
+                <li><a href="index.php?quanly=magiam">Nhận mã</a></li>
               </ul>
             </a>
           </li>

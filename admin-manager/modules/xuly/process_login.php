@@ -14,7 +14,7 @@ include('../config.php');
 			}
 			
 		}else{
-			echo 'Ca truy van bi sai';
+			echo 'Câu truy vấn bị sai!';
 		}
 	}
 ?>

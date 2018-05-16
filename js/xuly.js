@@ -5,7 +5,7 @@ $(document).ready(function(){
 		$(this).toggleClass('active', $(this).attr('href') == loc);
 	});
 	$('#btn-login-user').click(function(){
-		var email = $("#email-user").val();
+		var username_login = $("#username_login").val();
 		var pass = $("#password-user").val();
 		
 		if($.trim(email).length>0 && $.trim(pass).length>0){
@@ -14,7 +14,7 @@ $(document).ready(function(){
 			$.ajax({
 				url:"modules/maincontent/xuly/process_login.php",
 				method: "POST",
-				data:{email: email, password: pass},
+				data:{username_login: username_login, password: pass},
 				cache: false,
 				beforeSend:function(){
 					$('#btn-login-user').text('Đang kết nối...');
@@ -132,7 +132,10 @@ $(document).on('click','[id^="btn_giam_sp_"]',function(){
 		}
 	});
 });
-
+$('#btn_dang_ky').on('click', function(){
+	$('#btn_close_login').click();
+	$('#btn_signup').click();
+})
 /*
 $(document).on('click','[id^="btn-buy-now-"]',function(e){
 	e.preventDefault();

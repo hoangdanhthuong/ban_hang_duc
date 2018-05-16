@@ -303,3 +303,22 @@ footer {
     font-family: "Time New Roman";
 
 }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.title-header{
+  height: 40px;
+  background-color:#dc0ef7;
+  border-radius: 2px;
+}
+.title-header .tieu_de{
+  vertical-align: middle;
+  padding: 10px;
+  color: white;
+
+}
+.title-header .tieu_de a{
+  color: white;
+}

@@ -78,6 +78,12 @@ $result_hieu = mysqli_query($conn, $sql_hieu);
 						<input type="number" name="thu_tu" min="0" value="0" class="form-control" placeholder="" id="thu_tu">
 					</div>
 				</div>
+				<div class="form-group"> 
+					<label class="control-label col-sm-2" for="kich_thuoc">Kích thước</label>
+					<div class="col-sm-4">
+						<input type="text" name="kich_thuoc"  class="form-control" placeholder="" id="kich_thuoc">
+					</div>
+				</div>
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="thuong_hieu">Thương hiệu</label>
 					<div class="col-sm-4">

@@ -1,5 +1,10 @@
 $(document).ready(function(){
-	$('#table_thuong_hieu').DataTable();
+	$('#table_thuong_hieu').DataTable({
+		'columnDefs':[
+		{'searable':false,'orderable':false,'targets': 4},
+		{'searable':false,'orderable':false,'targets': 5},
+			]
+	});
 })
 $(document).on('click', '#btn_them_hieu_sp', function(){
 	var name = $.trim($('#input_tao_ten').val());

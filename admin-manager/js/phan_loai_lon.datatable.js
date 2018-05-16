@@ -1,5 +1,10 @@
 $(document).ready(function(){
-	$('#table_phan_loai_lon').DataTable();
+	$('#table_phan_loai_lon').DataTable({
+		'columnDefs':[
+		{'searable':false,'orderable':false,'targets': 4},
+		{'searable':false,'orderable':false,'targets': 5},
+			]
+	});
 })
 $(document).on('click', '#btn_them_phan_loai_lon', function(){
 	var name = $.trim($('#input_tao_ten').val());

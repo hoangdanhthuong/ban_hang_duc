@@ -15,6 +15,8 @@ if($tam=='phanloailon'){
   include('modules/content/phan_loai_nho/main.php');
 }elseif($tam=='hieu_sp'){
   include('modules/content/quan_ly_hieu_sp/main.php');
+}elseif($tam=='tintuc'){
+  include('modules/content/tin_tuc/main.php');
 }else{
   include("modules/content/dashboard.php");
 }
