@@ -17,6 +17,8 @@ if($tam=='phanloailon'){
   include('modules/content/quan_ly_hieu_sp/main.php');
 }elseif($tam=='tintuc'){
   include('modules/content/tin_tuc/main.php');
+}elseif($tam=='donhang'){
+  include('modules/content/hoa_don/main.php');
 }else{
   include("modules/content/dashboard.php");
 }

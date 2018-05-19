@@ -61,7 +61,7 @@ $result_loai_lon = mysqli_query($conn,$sql_loai_lon);
 								<div class="space-ten"></div>
 								<div class="btn-ground text-center">
 									<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-<?php echo $row['id_san_pham']?> " id="btn-buy-now-<?php echo $row['id_san_pham']?>"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
+									<button type="button" class="btn btn-primary" id="btn_xem_nhanh_<?php echo $row['id_san_pham']?>" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 								</div>
 								<div class="space-ten"></div>
 							</div>
@@ -120,7 +120,7 @@ $result_loai_lon = mysqli_query($conn,$sql_loai_lon);
 									<div class="space-ten"></div>
 									<div class="btn-ground text-center">
 										<a href="javascript:void(0)" class="btn btn-primary btn-buy-now-<?php echo $row['id_san_pham']?> " id="btn-buy-now-<?php echo $row['id_san_pham']?>"><span><i class="glyphicon glyphicon-shopping-cart"></i></span> Thêm vào giỏ</a>
-										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
+										<button type="button" class="btn btn-primary" id="btn_xem_nhanh_<?php echo $row['id_san_pham']?>" data-toggle="modal" data-target="#product_view"><span><i class="glyphicon glyphicon-search"></i></span> Xem nhanh</button>
 									</div>
 									<div class="space-ten"></div>
 								</div>
@@ -140,42 +140,7 @@ $result_loai_lon = mysqli_query($conn,$sql_loai_lon);
 	
 	<!-- Modal -->
 	<div class="modal fade" id="product_view" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-					<h3 class="modal-title">Quần đẹp tuyệt vời</h3>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="col-md-6 product_img">
-							<img src="images/quan_ao/1-1.jpg" class="img-responsive">
-						</div>
-						<div class="col-md-6 product_content">
-							<h4>Mã sản phẩm: <span>51526</span></h4>
-							<div class="rating">
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								<span class="glyphicon glyphicon-star"></span>
-								(10 reviews)
-							</div>
-							<div style="height: 200px; position: relative;">
-								
-								<p>Áo tuyệt đẹp</p>
-							</div>
-							<h3 class="cost"><span class="glyphicon glyphicon-vnd"></span> <?php echo number_format(800000).' VNĐ'?> <small class="pre-cost"><span class="glyphicon glyphicon-vnd"></span><?php echo number_format(900000).' VNĐ'?> </small></h3>
-							
-							<div class="space-ten"></div>
-							<div class="btn-ground">
-								<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-shopping-cart"></span> Thêm vào giỏ</button>
-								<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-heart"></span> Yêu thích</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 	</div>
 </div>
+<script type="text/javascript" src="js/xem_nhanh.js"></script>
